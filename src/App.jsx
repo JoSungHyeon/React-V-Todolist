@@ -22,12 +22,12 @@ const mockData = [
     isDone: false,
     content: "노래 연습하기",
     date: new Date().getTime(),
-  },
+  }
 ];
 
 function App() {
   const [todos, setTodos] = useState(mockData);
-  const idRef = useRef(3)
+  const idRef = useRef(3);
 
   const onCreate = (content) => {
     const newTodo = {
@@ -49,7 +49,7 @@ function App() {
   }
 
   const onDelete = (targetId) => {
-    // 인수 : todos배열에서 targetId와 일치하는 id를 갖는 요소만 삭제한 배열
+    // 인수 : todos 배열에서 targetId와 일치하는 id를 갖는 요소만 삭제한 배열
     setTodos(todos.filter((todo)=>todo.id !== targetId));
   }
   return (
